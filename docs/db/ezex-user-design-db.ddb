@@ -1,0 +1,1010 @@
+{
+  "author": "Unnamed",
+  "title": "ezex user",
+  "date": "2025-03-25T17:31:40.391Z",
+  "tables": [
+    {
+      "id": 0,
+      "name": "users",
+      "x": -790.7999877929688,
+      "y": -480.59999084472656,
+      "fields": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 0,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "firebase_uuid",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "email",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "status",
+          "type": "USER_STATUS",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 4,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 5,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [
+        {
+          "id": 0,
+          "name": "idx_users_email",
+          "unique": false,
+          "fields": [
+            "email"
+          ]
+        },
+        {
+          "id": 1,
+          "name": "idx_users_firebase_uuid",
+          "unique": false,
+          "fields": [
+            "firebase_uuid"
+          ]
+        },
+        {
+          "id": 2,
+          "name": "idx_users_status",
+          "unique": false,
+          "fields": [
+            "status"
+          ]
+        }
+      ],
+      "color": "#ffe159",
+      "key": 1742919139774
+    },
+    {
+      "id": 1,
+      "name": "user_profiles",
+      "x": -783.8,
+      "y": -168.2,
+      "fields": [
+        {
+          "name": "user_id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 0,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "first_name",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "last_name",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "display_name",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "avatar_url",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 4,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 5,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 6,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#ff9159",
+      "key": 1742920240971
+    },
+    {
+      "id": 2,
+      "name": "roles",
+      "x": -510.8,
+      "y": -486.20000000000005,
+      "fields": [
+        {
+          "name": "id",
+          "type": "SERIAL",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "admin, moderator, user, support",
+          "id": 0,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "role",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "admin, moderator, user, support",
+          "id": 1,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#7c4af0",
+      "key": 1742920683604
+    },
+    {
+      "id": 3,
+      "name": "permissions",
+      "x": -463.8,
+      "y": -150.19999999999987,
+      "fields": [
+        {
+          "name": "id",
+          "type": "SERIAL",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 0,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "permission",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "for example user:read or user:write",
+          "id": 1,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [
+        {
+          "id": 0,
+          "name": "idx_permissions_permission",
+          "unique": false,
+          "fields": [
+            "permission"
+          ]
+        }
+      ],
+      "color": "#3cde7d",
+      "key": 1742920946863
+    },
+    {
+      "id": 4,
+      "name": "user_roles",
+      "x": -790.8,
+      "y": 202.79999999999995,
+      "fields": [
+        {
+          "name": "user_id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 0,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "role_id",
+          "type": "SERIAL",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#bc49c4",
+      "key": 1742921348031
+    },
+    {
+      "id": 5,
+      "name": "role_permissions",
+      "x": -176.8,
+      "y": -242.2,
+      "fields": [
+        {
+          "name": "role_id",
+          "type": "SERIAL",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 0,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "permission_id",
+          "type": "SERIAL",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#175e7a",
+      "key": 1742921611217
+    },
+    {
+      "id": 6,
+      "name": "user_sessions",
+      "x": 89.20000000000005,
+      "y": -491.20000000000005,
+      "fields": [
+        {
+          "name": "token",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 0,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "user_id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "device",
+          "type": "SESSION_DEVICE",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 2
+        },
+        {
+          "name": "ip",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "user_agent",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 4,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 5,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "expired_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 6,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [
+        {
+          "id": 0,
+          "name": "idx_sessions_user_id",
+          "unique": false,
+          "fields": [
+            "user_id"
+          ]
+        },
+        {
+          "id": 1,
+          "name": "idx_sessions_expired_at",
+          "unique": false,
+          "fields": [
+            "expired_at"
+          ]
+        }
+      ],
+      "color": "#175e7a",
+      "key": 1742921719478
+    },
+    {
+      "id": 7,
+      "name": "user_settings",
+      "x": 85.19999999999999,
+      "y": -145.19999999999987,
+      "fields": [
+        {
+          "name": "user_id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 0,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "email_verified",
+          "type": "BOOLEAN",
+          "default": "false",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "two_fa_enabled",
+          "type": "BOOLEAN",
+          "default": "false",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "language",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "display_currency",
+          "type": "VARCHAR",
+          "default": "USD",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 4,
+          "size": 5,
+          "values": []
+        },
+        {
+          "name": "dark_mode",
+          "type": "BOOLEAN",
+          "default": "false",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 5,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "timezone",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 6,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "withdrawal_confirmation_mode",
+          "type": "BOOLEAN",
+          "default": "false",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 7,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 8,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 9,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#175e7a",
+      "key": 1742922522832
+    },
+    {
+      "id": 8,
+      "name": "login_audit_logs",
+      "x": -204.80000000000007,
+      "y": 32.80000000000001,
+      "fields": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": 0
+        },
+        {
+          "name": "user_id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "email",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "Helpful for failed login attempts",
+          "id": 2,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "sucess",
+          "type": "BOOLEAN",
+          "default": "false",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "Whether login was successful",
+          "id": 3,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "ip",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 4,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "user_agent",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 5,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "device",
+          "type": "SESSION_DEVICE",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 6,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "location",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 7,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "failure_reason",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "\"wrong password\", \"token expired\", etc.",
+          "id": 8,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 9,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [
+        {
+          "id": 0,
+          "name": "idx_login_user_id",
+          "unique": false,
+          "fields": [
+            "user_id"
+          ]
+        },
+        {
+          "id": 1,
+          "name": "idx_login_email",
+          "unique": false,
+          "fields": [
+            "email"
+          ]
+        },
+        {
+          "id": 2,
+          "name": "idx_login_created_at",
+          "unique": false,
+          "fields": [
+            "created_at"
+          ]
+        }
+      ],
+      "color": "#175e7a",
+      "key": 1742922925949
+    }
+  ],
+  "relationships": [
+    {
+      "startTableId": 0,
+      "startFieldId": 0,
+      "endTableId": 1,
+      "endFieldId": 0,
+      "cardinality": "one_to_one",
+      "updateConstraint": "No action",
+      "deleteConstraint": "Cascade",
+      "name": "users_id_fk",
+      "id": 0
+    },
+    {
+      "startTableId": 2,
+      "startFieldId": 0,
+      "endTableId": 4,
+      "endFieldId": 1,
+      "cardinality": "one_to_one",
+      "updateConstraint": "No action",
+      "deleteConstraint": "Cascade",
+      "name": "roles_id_fk",
+      "id": 1
+    },
+    {
+      "startTableId": 0,
+      "startFieldId": 0,
+      "endTableId": 4,
+      "endFieldId": 0,
+      "cardinality": "one_to_many",
+      "updateConstraint": "No action",
+      "deleteConstraint": "Cascade",
+      "name": "users_id_fk",
+      "id": 2
+    },
+    {
+      "startTableId": 2,
+      "startFieldId": 0,
+      "endTableId": 5,
+      "endFieldId": 0,
+      "cardinality": "many_to_one",
+      "updateConstraint": "No action",
+      "deleteConstraint": "Cascade",
+      "name": "roles_id_fk",
+      "id": 3
+    },
+    {
+      "startTableId": 3,
+      "startFieldId": 0,
+      "endTableId": 5,
+      "endFieldId": 1,
+      "cardinality": "many_to_one",
+      "updateConstraint": "No action",
+      "deleteConstraint": "Cascade",
+      "name": "permissions_id_fk",
+      "id": 4
+    },
+    {
+      "startTableId": 0,
+      "startFieldId": 0,
+      "endTableId": 6,
+      "endFieldId": 1,
+      "cardinality": "one_to_many",
+      "updateConstraint": "No action",
+      "deleteConstraint": "Cascade",
+      "name": "users_id_fk",
+      "id": 5
+    },
+    {
+      "startTableId": 0,
+      "startFieldId": 0,
+      "endTableId": 7,
+      "endFieldId": 0,
+      "cardinality": "one_to_one",
+      "updateConstraint": "No action",
+      "deleteConstraint": "Cascade",
+      "name": "users_id_fk",
+      "id": 6
+    },
+    {
+      "startTableId": 0,
+      "startFieldId": 0,
+      "endTableId": 8,
+      "endFieldId": 1,
+      "cardinality": "one_to_many",
+      "updateConstraint": "No action",
+      "deleteConstraint": "Set null",
+      "name": "users_id_fk",
+      "id": 7
+    }
+  ],
+  "notes": [],
+  "subjectAreas": [],
+  "database": "postgresql",
+  "types": [],
+  "enums": [
+    {
+      "name": "user_status",
+      "values": [
+        "pending",
+        "active",
+        "inactive",
+        "suspended",
+        "deleted"
+      ]
+    },
+    {
+      "name": "session_device",
+      "values": [
+        "web_chrome",
+        "web_firefox",
+        "web_edge",
+        "web_safari",
+        "web_other",
+        "mobile_android",
+        "mobile_ios",
+        "mobile_web",
+        "desktop_app",
+        "tablet",
+        "bot",
+        "unknown"
+      ]
+    }
+  ]
+}
